@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+<title></title>
+{% endblock %}
+
+
+
+{% block contenido %}
+<div class="alert alert-danger display-1"> <center>LISTA DE PARTICIPANTES SEMINARIO GASTRONOMICO</center></div>
+{% if participantes %}
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>TELEFONO</th>
+            <th>FECHA INSCRIPCION</th>
+            <th>INSTITUCIONES</th>
+            <th>HORA INSCRIPCION</th>
+            <th>ESTADO</th>
+            <th>OBSERVACION</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for participante in participantes %}
+        <tr>
+            <td scope ="row">{{ participante.id}}</td>
+            <td>{{ participante.nombre}}</td>
+            <td>{{ participante.telefono}}</td>
+            <td>{{ participante.fecha_inscripcion}}</td>
+            <td>{{ participante.instituciones}}</td>
+            <td>{{ participante.hora_inscripcion}}</td>
+            <td>{{ participante.estado}}</td>
+            <td>{{ participante.observacion}}</td>
+            <td><a href="/eliminar_participante/{{participante.id}}" class="btn btn-danger btn-sm"> <i class="bi bi-pencil"></i> Eliminar </a></td>
+            <td><a href="/actualizar_participante/{{participante.id}}" class="btn btn-danger btn-sm"><i class="bi bi-trash"></i> Actualizar </a></td>
+        </tr>
+        {% endfor %}
+    </tbody>            
+</table>    
+{% else %}
+    <div class="alert alert-danger">No hay partipantes  que mostrar</div>
+{% endif %}
+
+<a href="../" class="btn btn-danger">VOLVER</a>
+<a href="../agregar_participante" class="btn btn-dark float-end">AGREGAR PARTICIPANTE</a>
+{% endblock %}

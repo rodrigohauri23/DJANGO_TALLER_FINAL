@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+<title>Agregar participante</title>
+{% endblock %}
+
+
+
+{% block contenido %}
+<div class="alert alert-danger display-1 text-center">AGREGAR PARTICIPANTE</div>
+
+<form method="POST">
+    <table class="table">
+        {{form.as_table}}
+        {% csrf_token %}
+    </table>
+    <input type="submit"  value="AGREGAR" class="btn btn-dark float-end">
+</form>
+<a href="../" class="btn btn-danger mt-5">VOLVER</a>
+{% endblock %}

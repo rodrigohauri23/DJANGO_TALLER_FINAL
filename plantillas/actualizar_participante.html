@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+<title></title>
+{% endblock %}
+
+
+
+{% block contenido %}
+<div class="alert alert-danger display-1 text-center">ACTUALIZAR PARTICIPANTE</div>
+
+<form method="POST">
+    <table class="table">
+        {{form.as_table}}
+        {% csrf_token %}
+    </table>
+    <input type="submit" value="ACTUALIZAR" class="btn btn-info float-end">
+</form>
+<a href="/crud" class="btn btn-warning mt-5">VOLVER</a>
+{% endblock %}

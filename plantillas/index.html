@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static%}
+
+{% block titulo %}
+
+<title Sistema de registro></title>
+
+{% endblock %}
+
+
+
+{% block contenido %}
+<div class="alert alert-danger display-1 text-center">
+    
+    SISTEMA DE REGISTRO DE PARTICIPANTES
+<script
+    defer
+    src="https://app.embed.im/snow.js" 
+></script>
+</div>
+
+
+<div class="container">
+    <div class="row align-items-start">
+
+      <div class="col">
+        <div class="p-3 mb-2 text-white">
+            <center>
+                <a href="/crud" class="btn btn-danger">CRUD</a>
+            </center>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="p-3 mb-2  text-white">
+            <center>
+                <a href="/participantes" class="btn btn-danger">ApiRest</a>
+            </center>
+        </div>
+      </div>
+</div>
+</div>
+
+
+
+<div class="container">
+    <div class="row align-items-start">
+
+      <div class="col">
+        <div class="p-3 mb-2 text-white">
+            <center>
+                <a href="/participante" class="btn btn-danger">CBW</a>
+            </center>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="p-3 mb-2 text-white">
+            <center>
+                <a href="/instituciones" class="btn btn-danger">FBW</a>
+            </center>
+        </div>
+      </div>
+</div>
+</div>
+
+<div class="container">
+    <div class="row align-items-start">
+
+      <div class="col">
+        <div class="p-3 mb-2 text-white">
+            <center>
+                <a title="" href="/carta"> <img src="{%static "images/bailando.gif"%}" width="250" height="250" ></div>
+            </center>
+        </div>
+      </div>
+    </div>
+</div>
+
+ 
+
+
+
+{% endblock %}
